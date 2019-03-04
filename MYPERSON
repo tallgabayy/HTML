@@ -1,0 +1,71 @@
+<html>
+        <head>
+                <title>Person</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </head>
+        <body>
+            <form onsubmit= "formInfo"()>
+
+        
+                <hr>
+                    <p>First Name:<br> 
+                         <input type="text" id="firstName" required/></p>
+                    <p>Last Name:<br> 
+                         <input type="text" id="lastName"required/></p>
+                    <p>Birth Date:<br> 
+                         <input type="date" id="birthDate"required/></p>
+                    <p>Gender:<br>
+
+                        <input type="radio" name="gender" value="male" required> Male<br>
+                        <input type="radio" name="gender" value="female" required> Female<br>
+                        <br> <br>
+                    </p>
+                         <input type="checkbox"  value="vegeterian" > I am vegeterian <br>
+                         <p>Country:<br>
+                         <select name="countries">
+                                        <option value="Israel"required >Israel</option>
+                                        <option value="Canada"required >Canada</option>
+                                        <option value="USA"required >USA</option>
+                                        <option value="Paris"required >Paris</option>
+                                      </select> <br>
+
+                                      <br>
+                                                E-mail:<br>
+                                                <input type="email" name="email">
+
+
+<button type="submit">Submit</button>
+                                            
+                                             
+                     <script>
+     function printDetails()
+            {
+                var firstName = $('#firstName').val() 
+                var lastName = $('#lastName').val()
+                var bDay = $('#birthDate').val()
+                
+                var gender = $("input[type='radio']:checked").val()
+                var country = $("#countryselect option:selected").text()
+                var veg = $('#vegeterian').is(':checked')
+                //alert ("first name : " + firstName + " last name : " + lastName + " birthdate : " + bDay);
+                alert (`first name : ${firstName}\nlast name : ${lastName}\nbirthdate : ${bDay}
+
+gender : ${gender}
+country : ${country} 
+veg : ${veg}
+                `);
+            }
+                     
+                     </script>
+                                               
+                                            
+               </form>                     
+                </body>
+ 
+</html>
+
+
+
+
+
+
