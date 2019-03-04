@@ -1,0 +1,84 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @tallgabayy Sign out
+0
+0 0 app182019/04.03.2019
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+04.03.2019/PersonForm/PersonForm.html
+@app182019 app182019 Add files via upload
+91be063  36 minutes ago
+51 lines (48 sloc)  2.39 KB
+    
+<html>
+        <head>
+                <title>I Love HTML</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </head>
+        <body>
+                <hr>
+                <form onsubmit="printDetails()" id="myForm">
+                    <p>First Name: <input type="text" id="fninput" required/></p>
+                    <p>Last Name: <input type="text" id="lninput" required/></p>
+                    <p>Birth date:  <input type="date" id="bdinput"/></p>
+                    <p>Email:  <input type="email" id="emailinput" required/></p>
+                    <p><input type="radio" name="gender" value="male" > Male<br>
+                        <input type="radio" name="gender" value="female" required> Female<br></p>
+                    <p>
+                            <select id="countryselect">
+                                    <option value="Israel">Israel</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="France">France</option>
+                                  </select>
+                    </p>
+                    <p>
+                            <input type="checkbox" name="veg" id="vegchk" value="vegetarian"> Vegetarian<br>
+                    </p>
+                    <button type="submit">Print</button> <br>
+                    <button onclick="filldata()">Fill</button> <br>
+                </form>
+                </body>
+
+        <script>
+
+            function printDetails()
+            {
+                 var person= {
+                      firstName: "Tal",
+                      lastName: "Gabay" ,
+                       bDay: 09/04/1992 ,
+                //email:
+                 //gender:
+                 //country: 
+                // veg: 
+                 }
+
+                 alertPerson (person)
+            }
+                 function alertPerson
+            }
+                var firstName = $('#fninput').val() // # is id , val brings me the text of the text-boxc
+                var lastName = $('#lninput').val()
+                var bDay = $('#bdinput').val()
+                var email = $('#emailinput').val()
+                var gender = $("input[type='radio']:checked").val()
+                var country = $("#countryselect option:selected").text()
+                var veg = $('#vegchk').is(':checked')
+                //alert ("first name : " + firstName + " last name : " + lastName + " birthdate : " + bDay);
+                alert (`first name : ${firstName}\nlast name : ${lastName}\nbirthdate : ${bDay}
+email : ${email} 
+gender : ${gender}
+country : ${country} 
+veg : ${veg}
+                `);
+            
+                                                      
+        </script>
+</html>
+
